@@ -1,6 +1,8 @@
 var photos = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg'];
+var titleContent = ['Statue of Liberty', 'Burj Khalifa', 'Eiffle Tower', 'Lighthouse'];
 var count = 0;
 var myImg = document.getElementById('imgId');
+var myTitle = document.getElementById('title');
 
 function next(){
     count++;
@@ -11,6 +13,8 @@ function next(){
     else{
         myImg.src = photos[count];
     }
+    myTitle.innerHTML = titleContent[count];
+    myTitle.style.color = '#fff';
 }
 function prev(){
     count--;
@@ -21,4 +25,5 @@ function prev(){
     else{
         myImg.src = photos[count];
     }
+    myTitle.innerHTML = titleContent[count];
 }
